@@ -23,10 +23,13 @@ home-credit-default-risk/
 *.tgz
 data.txt
 
-# Exempt .gitkeep files so the directory structure is committed to GitHub
+# Exempt .gitkeep files and required backend data so they are committed to GitHub
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/scored/.gitkeep
+!data/scored/scored_customers.parquet
+!data/scored/shap_top10.parquet
+!data/scored/shap_global.parquet
 
 # Models and serialization outputs (Keep folder structure, ignore contents)
 models/*
@@ -35,6 +38,7 @@ models/*
 # Metrics and logs
 outputs/*
 !outputs/.gitkeep
+!outputs/metrics.json
 catboost_info/
 *.log
 
