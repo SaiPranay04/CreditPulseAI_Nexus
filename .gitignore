@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Data and large datasets (Ignore files inside but keep directory structure)
+data/raw/*
+data/processed/*
+data/scored/*
+home-credit-default-risk/
+*.zip
+*.gz
+*.tar
+*.tgz
+data.txt
+
+# Exempt .gitkeep files so the directory structure is committed to GitHub
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/scored/.gitkeep
+
+# Models and serialization outputs (Keep folder structure, ignore contents)
+models/*
+!models/.gitkeep
+
+# Metrics and logs
+outputs/*
+!outputs/.gitkeep
+catboost_info/
+*.log
+
+# IDEs, system and workspace settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
