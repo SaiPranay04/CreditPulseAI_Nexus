@@ -1,0 +1,73 @@
+/* ── Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --bg:       #04070F;
+  --surface:  #080E1A;
+  --surface2: #0C1526;
+  --surface3: #111D31;
+  --border:   #162035;
+  --border2:  #1E2E48;
+  --text:     #EEF2FA;
+  --text2:    #A8B5CC;
+  --muted:    #526280;
+  --pulse:    #00E5A0;
+  --gold:     #F5C518;
+  --green:    #00D26A;
+  --blue:     #3B82F6;
+  --yellow:   #FBBF24;
+  --amber:    #F97316;
+  --red:      #EF4444;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 4px; }
+
+/* Mono font utility */
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ecgDash {
+  to { stroke-dashoffset: -600; }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(0,229,160,0.12); }
+  50%       { box-shadow: 0 0 28px rgba(0,229,160,0.30); }
+}
+
+.fade-in { animation: fadeInUp 0.4s ease forwards; }
+.glow    { animation: glowPulse 3s ease-in-out infinite; }
+.ecg path { stroke-dasharray: 600; animation: ecgDash 5s linear infinite; }
+
+/* KPI Card hover */
+.kpi-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.kpi-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+
+/* Custom recharts tooltip */
+.recharts-tooltip-wrapper { outline: none !important; }
+.custom-tooltip {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text);
+}

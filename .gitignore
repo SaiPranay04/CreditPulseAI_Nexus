@@ -44,3 +44,11 @@ catboost_info/
 .DS_Store
 Thumbs.db
 *.swp
+
+# Documentation and AI Prompts
+*.md
+!README.md
+docs/
+claude_prompt*
+IDBI_methodology*
+IDBI_project_doc*
