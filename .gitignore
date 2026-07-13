@@ -52,3 +52,7 @@ docs/
 claude_prompt*
 IDBI_methodology*
 IDBI_project_doc*
+creditpulse_cursor_master_prompt*
+*.pdf
+*.pptx
+*.ipynb
