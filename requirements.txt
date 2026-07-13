@@ -6,6 +6,6 @@ xgboost
 scikit-learn
 shap
 joblib
-streamlit
-plotly
 catboost
+fastapi
+uvicorn[standard]
